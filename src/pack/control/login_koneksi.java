@@ -11,7 +11,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 /**
  *
- * @author Ridha Nadhira Febyan
+ * @author MALBUF
  */
 public class login_koneksi {
        private static Connection koneksi; 

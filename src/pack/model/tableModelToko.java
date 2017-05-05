@@ -10,7 +10,7 @@ import javax.swing.table.AbstractTableModel;
  
 /**
  *
- * @author Ridha Nadhira Febyan
+ * @author MALBUF
  */
 public class tableModelToko extends AbstractTableModel{
     

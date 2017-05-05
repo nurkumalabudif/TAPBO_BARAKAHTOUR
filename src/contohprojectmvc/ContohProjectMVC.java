@@ -7,7 +7,7 @@ package contohprojectmvc;
 
 /**
  *
- * @author Ridha Nadhira Febyan
+ * @author MALBUF
  */
 public class ContohProjectMVC {
 

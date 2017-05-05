@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane; 
 /**
  *
- * @author Ridha Nadhira Febyan
+ * @author MALBUF
  */
 public class c_koneksi { 
  

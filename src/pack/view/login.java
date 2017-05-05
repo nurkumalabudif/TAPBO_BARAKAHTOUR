@@ -27,7 +27,7 @@ import pack.control.login_koneksi;
 import pack.model.m_toko;
 /**
  *
- * @author Ridha Nadhira Febyan
+ * @author MALBUF
  */
 public class login extends javax.swing.JFrame {
   public static String user;
@@ -54,6 +54,7 @@ public class login extends javax.swing.JFrame {
         signup = new javax.swing.JButton();
         signIn = new javax.swing.JButton();
         exit1 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -84,7 +85,7 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(signup);
-        signup.setBounds(40, 240, 80, 30);
+        signup.setBounds(30, 240, 90, 30);
 
         signIn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         signIn.setText("Sign In");
@@ -94,7 +95,7 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(signIn);
-        signIn.setBounds(40, 200, 200, 30);
+        signIn.setBounds(30, 200, 200, 30);
 
         exit1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         exit1.setText("Exit");
@@ -104,9 +105,14 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(exit1);
-        exit1.setBounds(160, 240, 80, 30);
+        exit1.setBounds(140, 240, 90, 30);
 
-        setBounds(0, 0, 293, 349);
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(10, 10, 250, 170);
+
+        setBounds(0, 0, 289, 323);
     }// </editor-fold>//GEN-END:initComponents
 
     private void signInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signInActionPerformed
@@ -190,6 +196,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JButton exit1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton signIn;
     private javax.swing.JButton signup;
     private javax.swing.JTextField txtpass;

@@ -18,7 +18,7 @@ import pack.view.home;
 import pack.model.tableModelToko; 
 /**
  *
- * @author Ridha Nadhira Febyan
+ * @author MALBUF
  */
 public class controllerToko {
     home hm; 

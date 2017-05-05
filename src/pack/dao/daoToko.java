@@ -17,7 +17,7 @@ import pack.control.c_koneksi;
 import pack.model.m_toko; 
 /**
  *
- * @author Ridha Nadhira Febyan
+ * @author MALBUF
  */
 public class daoToko implements implementToko{
      Connection connection; 

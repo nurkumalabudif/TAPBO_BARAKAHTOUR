@@ -22,7 +22,7 @@ import pack.control.controllerToko;
 import pack.model.m_toko;
 /**
  *
- * @author Ridha Nadhira Febyan
+ * @author MALBUF
  */
 public class home extends javax.swing.JFrame {
     
@@ -63,14 +63,16 @@ public class home extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         carikategori = new javax.swing.JComboBox<>();
-        simpan = new javax.swing.JButton();
-        ubah = new javax.swing.JButton();
-        hapus = new javax.swing.JButton();
-        keluar = new javax.swing.JButton();
-        bersihkan = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         cari = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        bersihkan = new javax.swing.JButton();
+        hapus = new javax.swing.JButton();
+        keluar = new javax.swing.JButton();
+        ubah = new javax.swing.JButton();
+        simpan = new javax.swing.JButton();
 
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton6.setText("jButton1");
@@ -82,13 +84,13 @@ public class home extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Admin Toko");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 37, 85, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 85, -1));
 
         txtadmin.setEditable(false);
         txtadmin.addActionListener(new java.awt.event.ActionListener() {
@@ -96,12 +98,12 @@ public class home extends javax.swing.JFrame {
                 txtadminActionPerformed(evt);
             }
         });
-        jPanel1.add(txtadmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 30, 93, 29));
+        jPanel1.add(txtadmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 93, 29));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Data Barang  di TOko");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 344, 61));
+        jLabel2.setText("LIST DATA PRODUCT ON SHOP");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 344, 61));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -158,55 +160,15 @@ public class home extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Pencarian Berdasarkan");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 312, 213, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 213, -1));
 
         carikategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Makanan", "Baranglain", " " }));
-        jPanel1.add(carikategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 305, 189, 28));
-
-        simpan.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        simpan.setText("Simpan");
-        simpan.addActionListener(new java.awt.event.ActionListener() {
+        carikategori.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                simpanActionPerformed(evt);
+                carikategoriActionPerformed(evt);
             }
         });
-        jPanel1.add(simpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(518, 108, 103, 29));
-
-        ubah.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        ubah.setText("Ubah");
-        ubah.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ubahActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ubah, new org.netbeans.lib.awtextra.AbsoluteConstraints(518, 143, 103, 29));
-
-        hapus.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        hapus.setText("Hapus");
-        hapus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hapusActionPerformed(evt);
-            }
-        });
-        jPanel1.add(hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(518, 213, 103, 29));
-
-        keluar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        keluar.setText("Keluar");
-        keluar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                keluarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(keluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(518, 248, 103, 29));
-
-        bersihkan.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        bersihkan.setText("Bersihkan");
-        bersihkan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bersihkanActionPerformed(evt);
-            }
-        });
-        jPanel1.add(bersihkan, new org.netbeans.lib.awtextra.AbsoluteConstraints(518, 178, 103, 29));
+        jPanel1.add(carikategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 189, 28));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -235,13 +197,85 @@ public class home extends javax.swing.JFrame {
                 cariActionPerformed(evt);
             }
         });
-        jPanel1.add(cari, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 314, 103, 29));
+        jPanel1.add(cari, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 103, 29));
+
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 224, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 44, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 230, 50));
+
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel3.setLayout(null);
+
+        bersihkan.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        bersihkan.setText("Bersihkan");
+        bersihkan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bersihkanActionPerformed(evt);
+            }
+        });
+        jPanel3.add(bersihkan);
+        bersihkan.setBounds(430, 80, 103, 40);
+
+        hapus.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        hapus.setText("Hapus");
+        hapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hapusActionPerformed(evt);
+            }
+        });
+        jPanel3.add(hapus);
+        hapus.setBounds(300, 139, 103, 40);
+
+        keluar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        keluar.setText("Keluar");
+        keluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                keluarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(keluar);
+        keluar.setBounds(430, 139, 103, 40);
+
+        ubah.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        ubah.setText("Ubah");
+        ubah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ubahActionPerformed(evt);
+            }
+        });
+        jPanel3.add(ubah);
+        ubah.setBounds(300, 80, 103, 40);
+
+        simpan.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        simpan.setText("Simpan");
+        simpan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                simpanActionPerformed(evt);
+            }
+        });
+        jPanel3.add(simpan);
+        simpan.setBounds(360, 20, 110, 40);
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 550, 200));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 583, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -250,62 +284,66 @@ public class home extends javax.swing.JFrame {
                 .addGap(0, 30, Short.MAX_VALUE))
         );
 
-        setBounds(0, 0, 744, 618);
+        setBounds(0, 0, 599, 618);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtadminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtadminActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtadminActionPerformed
-
-    private void kodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_kodeActionPerformed
-
-    private void namaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_namaActionPerformed
-
-    private void hargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hargaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_hargaActionPerformed
-
-    private void bersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihkanActionPerformed
-        ctoko.Reset();
-    }//GEN-LAST:event_bersihkanActionPerformed
-
-    private void simpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanActionPerformed
-        ctoko.SimpanData();
-        ctoko.isiTable();
-    }//GEN-LAST:event_simpanActionPerformed
-
-    private void ubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubahActionPerformed
-        ctoko.Ubah();
-        ctoko.isiTable();
-    }//GEN-LAST:event_ubahActionPerformed
-
-    private void hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusActionPerformed
-        ctoko.Hapus();
-        ctoko.isiTable();
-    }//GEN-LAST:event_hapusActionPerformed
-
-    private void keluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluarActionPerformed
-        dispose();
-    }//GEN-LAST:event_keluarActionPerformed
-
-    private void cariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cariActionPerformed
-        ctoko.CariKategori();
-        //ctoko.isiTable();
-    }//GEN-LAST:event_cariActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         String user1 = login.user;
         txtadmin.setText(user1);
     }//GEN-LAST:event_formWindowOpened
 
+    private void cariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cariActionPerformed
+        ctoko.CariKategori();
+        //ctoko.isiTable();
+    }//GEN-LAST:event_cariActionPerformed
+
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
         ctoko.isiField(jTable1.getSelectedRow());
     }//GEN-LAST:event_jTable1MouseClicked
+
+    private void bersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihkanActionPerformed
+        ctoko.Reset();
+    }//GEN-LAST:event_bersihkanActionPerformed
+
+    private void keluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluarActionPerformed
+        dispose();
+    }//GEN-LAST:event_keluarActionPerformed
+
+    private void hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusActionPerformed
+        ctoko.Hapus();
+        ctoko.isiTable();
+    }//GEN-LAST:event_hapusActionPerformed
+
+    private void ubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubahActionPerformed
+        ctoko.Ubah();
+        ctoko.isiTable();
+    }//GEN-LAST:event_ubahActionPerformed
+
+    private void simpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanActionPerformed
+        ctoko.SimpanData();
+        ctoko.isiTable();
+    }//GEN-LAST:event_simpanActionPerformed
+
+    private void carikategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carikategoriActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_carikategoriActionPerformed
+
+    private void hargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hargaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hargaActionPerformed
+
+    private void namaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_namaActionPerformed
+
+    private void kodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kodeActionPerformed
+
+    private void txtadminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtadminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtadminActionPerformed
 
     /**
      * @param args the command line arguments
@@ -358,6 +396,8 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JComboBox<String> jenis;
