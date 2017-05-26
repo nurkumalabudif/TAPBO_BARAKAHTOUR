@@ -5,16 +5,16 @@
  */
 package pack.dao;
 import java.util.List; 
-import pack.model.m_toko; 
+import pack.model.m_haji; 
 /**
  *
  * @author MALBUF
  */
-public interface implementToko {
-    public void TampilData(m_toko a); 
-    public void UbahData(m_toko a); 
-    public void SimpanData(m_toko a); 
+public interface implementHaji {
+    public void TampilData(m_haji a); 
+    public void UbahData(m_haji a); 
+    public void SimpanData(m_haji a); 
     public void HapusData(String kode); 
-    public List<m_toko> getCariKategori(String kategori); 
-    public List<m_toko> getAll();
+    public List<m_haji> getCariKategori(String kategori); 
+    public List<m_haji> getAll();
 }

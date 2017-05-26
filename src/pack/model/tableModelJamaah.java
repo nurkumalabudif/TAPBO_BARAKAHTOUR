@@ -12,10 +12,10 @@ import javax.swing.table.AbstractTableModel;
  *
  * @author MALBUF
  */
-public class tableModelToko extends AbstractTableModel{
+public class tableModelJamaah extends AbstractTableModel{
     
-    List<m_toko>lt; 
-    public tableModelToko(List<m_toko> lt) { 
+    List<m_haji>lt; 
+    public tableModelJamaah(List<m_haji> lt) { 
     this.lt=lt; 
     } 
  
@@ -31,15 +31,15 @@ public class tableModelToko extends AbstractTableModel{
     public String getColumnName(int column) { 
     switch (column){ 
         case 0: 
-            return"Kode_Barang"; 
+            return"Id_Jamaah"; 
         case 1: 
-            return"Nama_Barang"; 
+            return"Nama_Jamaah"; 
         case 2: 
             return"Kategori"; 
         case 3: 
-            return"Jenis"; 
+            return"Jenis_Pelayanan"; 
         case 4: 
-            return"Harga"; 
+            return"Lama_Hari"; 
         default: 
             return null; 
     }} 

@@ -21,7 +21,7 @@ public class login_koneksi {
        if (koneksi == null) { 
         Driver driver = new Driver(); 
         koneksi = (Connection) 
-        DriverManager.getConnection("jdbc:mysql://localhost/toko?zeroDateTimeBehavior=convertToNull", "root", ""); 
+        DriverManager.getConnection("jdbc:mysql://localhost/pbo_hajidanumroh?zeroDateTimeBehavior=convertToNull", "root", ""); 
        } 
        return koneksi; 
        }

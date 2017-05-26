@@ -18,22 +18,22 @@ import javax.swing.JTable;
 import javax.swing.JTextField; 
 import javax.swing.table.DefaultTableModel; 
 import pack.control.c_koneksi; 
-import pack.control.controllerToko; 
-import pack.model.m_toko;
+import pack.control.controllerHaji; 
+import pack.model.m_haji;
 /**
  *
  * @author MALBUF
  */
 public class home extends javax.swing.JFrame {
     
-    controllerToko ctoko;
-    List<m_toko>listdata = new ArrayList<>();
+    controllerHaji ctoko;
+    List<m_haji>listdata = new ArrayList<>();
     /**
      * Creates new form home
      */
     public home() {
         initComponents();
-        ctoko = new controllerToko(this);
+        ctoko = new controllerHaji(this);
         ctoko.isiTable();
     }
 
@@ -48,9 +48,7 @@ public class home extends javax.swing.JFrame {
 
         jButton6 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         txtadmin = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         kode = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -67,12 +65,16 @@ public class home extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         cari = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         bersihkan = new javax.swing.JButton();
         hapus = new javax.swing.JButton();
         keluar = new javax.swing.JButton();
         ubah = new javax.swing.JButton();
         simpan = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
 
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton6.setText("jButton1");
@@ -87,11 +89,6 @@ public class home extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Admin Toko");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 85, -1));
-
         txtadmin.setEditable(false);
         txtadmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,14 +97,9 @@ public class home extends javax.swing.JFrame {
         });
         jPanel1.add(txtadmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 93, 29));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("LIST DATA PRODUCT ON SHOP");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 344, 61));
-
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Kode Barang");
+        jLabel3.setText("Id Jamaah");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 120, -1));
 
         kode.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +111,7 @@ public class home extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Nama Barang");
+        jLabel4.setText("Nama Jamaah");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 106, -1));
 
         nama.addActionListener(new java.awt.event.ActionListener() {
@@ -131,8 +123,8 @@ public class home extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Harga");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 88, -1));
+        jLabel5.setText("Lama Hari");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 250, 100, -1));
 
         harga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,20 +133,20 @@ public class home extends javax.swing.JFrame {
         });
         jPanel1.add(harga, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 248, 149, 29));
 
-        kategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Makanan", "Baranglain" }));
+        kategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Umroh", "Haji" }));
         jPanel1.add(kategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 180, 149, 28));
 
-        jenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pack", " " }));
+        jenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ekonomis", "Reguler", "Plus", "Plus++", " ", " " }));
         jPanel1.add(jenis, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 214, 149, 28));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Kategori Barang");
+        jLabel6.setText("Kategori");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 110, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Jenis Packaging");
+        jLabel7.setText("Jenis Pelayanan");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 120, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -162,7 +154,7 @@ public class home extends javax.swing.JFrame {
         jLabel8.setText("Pencarian Berdasarkan");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 213, -1));
 
-        carikategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Makanan", "Baranglain", " " }));
+        carikategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Umroh", "Haji", " ", " " }));
         carikategori.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 carikategoriActionPerformed(evt);
@@ -178,7 +170,7 @@ public class home extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Kode Barang", "Nama Barang", "Kategori", "Packaging", "Harga"
+                "Id Jamaah", "Nama Jamaah", "Kategori", "Jenis Pelayanan", "Lama Hari"
             }
         ));
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -201,17 +193,25 @@ public class home extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setLayout(null);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 224, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 44, Short.MAX_VALUE)
-        );
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Cabang");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(20, 20, 85, 14);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Sekretariat");
+        jPanel2.add(jLabel9);
+        jLabel9.setBounds(20, 10, 85, 13);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("BARAKAH TOUR HAJI AND UMROH");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(-210, 40, 344, 61);
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 230, 50));
 
@@ -270,6 +270,10 @@ public class home extends javax.swing.JFrame {
         simpan.setBounds(360, 20, 110, 40);
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 550, 200));
+
+        jLabel10.setFont(new java.awt.Font("Microsoft Tai Le", 1, 20)); // NOI18N
+        jLabel10.setText("BARAKAH TOUR HAJI AND UMROH");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -388,6 +392,7 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JTextField harga;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -395,6 +400,7 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

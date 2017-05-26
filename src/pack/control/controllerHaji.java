@@ -11,23 +11,23 @@ import java.util.List;
 import javax.swing.JOptionPane; 
 import javax.swing.table.DefaultTableModel; 
 import javax.swing.table.TableModel; 
-import pack.dao.daoToko; 
-import pack.dao.implementToko; 
-import pack.model.m_toko; 
+import pack.dao.daoHaji; 
+import pack.model.m_haji; 
 import pack.view.home; 
-import pack.model.tableModelToko; 
+import pack.model.tableModelJamaah; 
+import pack.dao.implementHaji;
 /**
  *
  * @author MALBUF
  */
-public class controllerToko {
+public class controllerHaji {
     home hm; 
-    implementToko impToko; 
-    List<m_toko> lt; 
+    implementHaji impToko; 
+    List<m_haji> lt; 
      
-    public controllerToko(home hm){ 
+    public controllerHaji(home hm){ 
         this.hm = hm; 
-        impToko = new daoToko(); 
+        impToko = new daoHaji(); 
         lt = impToko.getAll();   
     } 
  
@@ -52,7 +52,7 @@ public class controllerToko {
     } 
     //menyimpan data 
     public void SimpanData(){ 
-        m_toko toko = new m_toko(); 
+        m_haji toko = new m_haji(); 
         toko.setkode(hm.getTxtKode().getText()); 
         toko.setnama(hm.getTxtNama().getText()); 
         toko.setharga(hm.getTxtHarga().getText()); 
@@ -63,7 +63,7 @@ toko.setkategori(hm.getCbKategori().getSelectedItem().toString());
     } 
     //mengubah data 
     public void Ubah(){ 
-        m_toko toko = new m_toko(); 
+        m_haji toko = new m_haji(); 
         toko.setkode(hm.getTxtKode().getText()); 
         toko.setnama(hm.getTxtNama().getText()); 
         
@@ -75,7 +75,7 @@ toko.setkategori(hm.getCbKategori().getSelectedItem().toString());
  
     public void isiTable() { 
     lt =impToko.getAll();  
-    tableModelToko tmt = new tableModelToko(lt); 
+    tableModelJamaah tmt = new tableModelJamaah(lt); 
     hm.getTableData().setModel(tmt); 
      
     } 
@@ -103,7 +103,7 @@ toko.setkategori(hm.getCbKategori().getSelectedItem().toString());
        String item = 
 hm.getCbCariKategori().getSelectedItem().toString(); 
        lt =impToko.getCariKategori(item); 
-       tableModelToko tmt = new tableModelToko(lt); 
+       tableModelJamaah tmt = new tableModelJamaah(lt); 
        hm.getTableData().setModel(tmt); 
         
     } 

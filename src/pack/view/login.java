@@ -22,9 +22,9 @@ import javax.swing.JTable;
 import javax.swing.JTextField; 
 import javax.swing.table.DefaultTableModel; 
 import pack.control.c_koneksi; 
-import pack.control.controllerToko; 
+import pack.control.controllerHaji; 
 import pack.control.login_koneksi;
-import pack.model.m_toko;
+import pack.model.m_haji;
 /**
  *
  * @author MALBUF
@@ -47,35 +47,19 @@ public class login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtuname = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        txtpass = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         signup = new javax.swing.JButton();
         signIn = new javax.swing.JButton();
         exit1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        txtuname = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtpass = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
-
-        txtuname.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        getContentPane().add(txtuname);
-        txtuname.setBounds(60, 50, 150, 35);
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setText("Username");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(100, 30, 90, 15);
-
-        txtpass.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        getContentPane().add(txtpass);
-        txtpass.setBounds(60, 110, 150, 35);
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Password");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(100, 90, 90, 15);
 
         signup.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         signup.setText("Sign Up");
@@ -85,7 +69,7 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(signup);
-        signup.setBounds(30, 240, 90, 30);
+        signup.setBounds(120, 310, 90, 30);
 
         signIn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         signIn.setText("Sign In");
@@ -95,7 +79,7 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(signIn);
-        signIn.setBounds(30, 200, 200, 30);
+        signIn.setBounds(120, 270, 200, 30);
 
         exit1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         exit1.setText("Exit");
@@ -105,14 +89,46 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(exit1);
-        exit1.setBounds(140, 240, 90, 30);
+        exit1.setBounds(230, 310, 90, 30);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(10, 10, 250, 170);
+        jPanel1.setLayout(null);
 
-        setBounds(0, 0, 289, 323);
+        txtuname.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel1.add(txtuname);
+        txtuname.setBounds(130, 40, 150, 35);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("Password");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(170, 80, 90, 15);
+
+        txtpass.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel1.add(txtpass);
+        txtpass.setBounds(130, 100, 150, 35);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setText("Username");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(170, 20, 90, 15);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(10, 70, 420, 190);
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 20)); // NOI18N
+        jLabel1.setText("BARAKAH TOUR HAJI AND UMROH");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(30, 20, 370, 30);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(10, 10, 420, 60);
+
+        setBounds(0, 0, 461, 391);
     }// </editor-fold>//GEN-END:initComponents
 
     private void signInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signInActionPerformed
@@ -196,7 +212,9 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JButton exit1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JButton signIn;
     private javax.swing.JButton signup;
     private javax.swing.JTextField txtpass;

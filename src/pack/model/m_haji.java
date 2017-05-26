@@ -9,17 +9,17 @@ package pack.model;
  *
  * @author MALBUF
  */
-public class m_toko {
-    public String Nama_Barang, Jenis, Harga, Kategori; 
-    public String Kode_Barang; 
+public class m_haji {
+    public String Nama_Jamaah, Jenis_Pelayanan, Lama_Hari, Kategori; 
+    public String Id_Jamaah; 
 
     public String getkode() 
     { 
-        return Kode_Barang; 
+        return Id_Jamaah; 
     } 
     public String getnama() 
     { 
-        return Nama_Barang; 
+        return Nama_Jamaah; 
     } 
     public String getkategori()  
     { 
@@ -28,21 +28,21 @@ public class m_toko {
 
     public String getjenis() 
     { 
-        return Jenis; 
+        return Jenis_Pelayanan; 
     } 
     public String getharga() 
     { 
-        return Harga; 
+        return Lama_Hari; 
     } 
 
     //method set  
     public void setkode(String kode) 
     { 
-        this.Kode_Barang= kode; 
+        this.Id_Jamaah= kode; 
     } 
     public void setnama(String nama) 
     { 
-        this.Nama_Barang= nama; 
+        this.Nama_Jamaah= nama; 
     } 
     public void setkategori(String kategori)  
     { 
@@ -50,11 +50,11 @@ public class m_toko {
     } 
     public void setjenis(String jenis) 
     { 
-        this.Jenis= jenis; 
+        this.Jenis_Pelayanan= jenis; 
     } 
     public void setharga(String harga) 
     { 
-        this.Harga= harga; 
+        this.Lama_Hari= harga; 
     }  
   
 }
